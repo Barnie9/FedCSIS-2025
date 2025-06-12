@@ -9,7 +9,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import joblib
 from torch.utils.data import DataLoader, TensorDataset
 
-from cnn_mlp import training_data_path, model_path, scaler_path, plot_path, device
+from cnn_mlp import training_data_path, model_path, scaler_path, device
 from cnn_mlp import get_success_prob_columns, fen_to_tensor, chess_additional_features, encode_moves_enhanced
 from cnn_mlp import ChessPuzzleCNN
 
@@ -118,7 +118,6 @@ max_val = max(val_true.max(), val_preds.max())
 plt.plot([min_val, max_val], [min_val, max_val], 'r--', label='Perfect prediction')
 plt.legend()
 plt.show()
-plt.savefig(plot_path)
 
 torch.save(model.state_dict(), model_path)
 print(f"CNN model saved to {model_path}")

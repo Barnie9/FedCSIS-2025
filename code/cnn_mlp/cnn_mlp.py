@@ -9,7 +9,6 @@ testing_data_path = os.path.join('dataset', 'testing_data.csv')
 model_path = os.path.join('models', 'cnn_mlp_chess_rating_model.pt')
 scaler_path = os.path.join('scalers', 'cnn_mlp_feature_scaler.save')
 submission_path = os.path.join('submissions', 'cnn_mlp_chess_rating_submission.csv')
-plot_path = os.path.join('plots', 'cnn_mlp_plot.png')
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

@@ -99,7 +99,6 @@ max_val = max(val_true.max(), val_preds.max())
 plt.plot([min_val, max_val], [min_val, max_val], 'r--', label='Perfect prediction')
 plt.legend()
 plt.show()
-plt.savefig(plot_path)
 
 # Save model
 torch.save(model.state_dict(), model_path)

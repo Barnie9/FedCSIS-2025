@@ -7,7 +7,6 @@ testing_data_path = os.path.join('dataset', 'testing_data.csv')
 model_path = os.path.join('models', 'mlp_chess_rating_model.pt')
 scaler_path = os.path.join('scalers', 'mlp_feature_scaler.save')
 submission_path = os.path.join('submissions', 'mlp_submission.txt')
-plot_path = os.path.join('plots', 'mlp_plot.png')
 
 def get_success_prob_columns(df):
     return [col for col in df.columns if col.startswith('success_prob_')]
